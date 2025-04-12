@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Portfolio
+        </title>
+        <link rel="icon" href="favicon.svg" type="image/x-icon">
+        <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'> 
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            * {
+                margin: 0px;  
+                padding: 0px;   
+            }
+            body {
+                font-family: 'Public Sans';
+            }
+            .line-break {
+                position: static;
+                height: 10px;
+                background-color: #FFFFFF;
+            }
+            .header-banner {
+                height: 75px;
+                background-color: #ffffff;
+                margin: 0px;
+                padding: 0px;
+            }
+            .logo-name {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                cursor: pointer;
+                color: #f9bf29;
+                height: 50px;
+                margin-left: 50px;
+                margin-top: 25px;
+                font-size: 50px ;
+                font-weight: bold;
+            }
+            .dot {
+                height: 15px;
+                width: 15px;
+                background-color: #f9bf29;
+                border-radius: 50%;
+                display: inline-block;
+            }
+            .dotName {
+                height: 2.5px;
+                width: 2.5px;
+                background-color: #434343;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 3px;
+                padding: 3px;
+            }
+            .custom-navbar {
+                font-family: 'Public Sans';
+                text-decoration: none;
+                float: right;
+                overflow: hidden;
+            }
+            .custom-navbar ul {
+                margin-right: 25px;
+                padding: 5px;
+                list-style-type: none;
+            }
+            .custom-navbar ul li {
+                float: left;
+                color: #FFFFFF;
+                text-align: center;
+                padding: 14px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .custom-navbar ul li.Resume {
+                border-radius: 50px;
+                background-color: #a9a9a9;
+            }
+            .custom-navbar ul li.Resume:hover {
+                background-color: #f9bf29;
+            }
+            .custom-navbar ul li a {
+                color: lightgray;
+                text-align: center;
+                padding: 15px;
+                text-decoration: none;
+                font-size: 17px;
+                font-weight: bold;
+            }
+            .custom-navbar ul a.Resume1 {
+                color: #FFFFFF;
+            }
+            .custom-navbar ul li a:hover {
+                color: #525252;
+            }
+            .resume-download {
+                color: lightgray;
+                font-weight: bold;  
+                border: #525252;
+                border-radius: 50%;          
+            }
+            .analyticsText {
+                font-family: "Noto Sans", sans-serif;
+                font-size: 30px;
+                color: #393939;
+                font-weight: bolder;
+                position: static;
+                text-align: center;
+                margin-top: 30px;
+            }
+            hr.analyticsUnderline {
+                width: 100px;
+                border: 2.5px solid #ffb700;
+                border-radius: 5px;
+                position: absolute;
+                left: 46%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .analytics-section {
+                position: static;
+                margin-top: 50px;
+                width: 100%;
+                height: 600px;
+                font-family: 'Trebuchet MS', sans-serif;
+            }
+            .analytics-section .one {
+                position: static;
+                background-color: #FBFBFD;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .analytics-section .two {
+                position: static;
+                background-color: #FFFFFF;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .analytics-section .three {
+                position: static;
+                background-color: #FBFBFD;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .analytics-projectname {
+                width: 40%;
+                float: left;
+                text-align: center;
+                font-family: "Noto Sans", sans-serif ;
+                font-weight: bolder;
+                color: #434343;
+                height: 200px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .analytics-projectdescription {
+                width: 60%;
+                float: right;
+                text-align: left;
+                height: 200px;
+            }
+            .analytics-projectdescriptiontext {
+                text-align: left;
+                font-family: "Trebuchet MS";
+                font-weight: normal;
+                font-size: 14px;
+                padding-right: 50px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .datascienceText {
+                font-family: "Noto Sans", sans-serif;
+                font-size: 30px;
+                color: #393939;
+                font-weight: bolder;
+                position: static;
+                text-align: center;
+                margin-top: 30px;
+            }
+            hr.datascienceUnderline {
+                width: 100px;
+                border: 2.5px solid #ffb700;
+                border-radius: 5px;
+                position: absolute;
+                left: 46%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .datascience-section {
+                position: static;
+                margin-top: 50px;
+                width: 100%;
+                height: 600px;
+                font-family: 'Trebuchet MS', sans-serif;
+            }
+            .datascience-section .one {
+                position: static;
+                background-color: #FBFBFD;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .datascience-section .two {
+                position: static;
+                background-color: #FFFFFF;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .datascience-section .three {
+                position: static;
+                background-color: #FBFBFD;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .datascience-projectname {
+                width: 40%;
+                float: left;
+                text-align: center;
+                font-family: "Noto Sans", sans-serif ;
+                font-weight: bolder;
+                color: #434343;
+                height: 200px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .datascience-projectdescription {
+                width: 60%;
+                float: right;
+                text-align: left;
+                height: 200px;
+            }
+            .datascience-projectdescriptiontext {
+                text-align: left;
+                font-family: "Trebuchet MS";
+                font-weight: normal;
+                font-size: 14px;
+                padding-right: 50px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .automationText {
+                font-family: "Noto Sans", sans-serif;
+                font-size: 30px;
+                color: #393939;
+                font-weight: bolder;
+                position: static;
+                text-align: center;
+                margin-top: 30px;
+            }
+            hr.automationUnderline {
+                width: 100px;
+                border: 2.5px solid #ffb700;
+                border-radius: 5px;
+                position: absolute;
+                left: 46%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .automation-section {
+                position: static;
+                margin-top: 50px;
+                width: 100%;
+                height: 600px;
+                font-family: 'Trebuchet MS', sans-serif;
+            }
+            .automation-section .one {
+                position: static;
+                background-color: #FBFBFD;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .automation-section .two {
+                position: static;
+                background-color: #FFFFFF;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .automation-section .three {
+                position: static;
+                background-color: #FBFBFD;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .automation-projectname {
+                width: 40%;
+                float: left;
+                text-align: center;
+                font-family: "Noto Sans", sans-serif ;
+                font-weight: bolder;
+                color: #434343;
+                height: 200px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .automation-projectdescription {
+                width: 60%;
+                float: right;
+                text-align: left;
+                height: 200px;
+            }
+            .automation-projectdescriptiontext {
+                text-align: left;
+                font-family: "Trebuchet MS";
+                font-weight: normal;
+                font-size: 14px;
+                padding-right: 50px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .webdevText {
+                font-family: "Noto Sans", sans-serif;
+                font-size: 30px;
+                color: #393939;
+                font-weight: bolder;
+                position: static;
+                text-align: center;
+                margin-top: 30px;
+            }
+            hr.webdevUnderline {
+                width: 100px;
+                border: 2.5px solid #ffb700;
+                border-radius: 5px;
+                position: absolute;
+                left: 46%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .webdev-section {
+                position: static;
+                margin-top: 50px;
+                width: 100%;
+                height: 600px;
+                font-family: 'Trebuchet MS', sans-serif;
+            }
+            .webdev-section .one {
+                position: static;
+                background-color: #FBFBFD;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .webdev-section .two {
+                position: static;
+                background-color: #FFFFFF;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .webdev-section .three {
+                position: static;
+                background-color: #FBFBFD;
+                width: 100%;
+                height: 200px;
+                font-family: 'Poppins', sans-serif;
+            }
+            .webdev-projectname {
+                width: 40%;
+                float: left;
+                text-align: center;
+                font-family: "Noto Sans", sans-serif ;
+                font-weight: bolder;
+                color: #434343;
+                height: 200px;
+                font-size: 25px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .webdev-projectdescription {
+                width: 60%;
+                float: right;
+                text-align: left;
+                height: 200px;
+            }
+            .webdev-projectdescriptiontext {
+                text-align: left;
+                font-family: "Trebuchet MS";
+                font-weight: normal;
+                font-size: 14px;
+                padding-right: 50px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                flex-direction: column;
+            }
+            .footer-section {
+                height: 125px;
+                background-color: #f9bf29;
+                margin: 0px;
+                padding: 0px;
+                text-align: center;
+            }
+            .footer-social {
+                position: relative;
+                top: 40px;
+            }
+            .svg-inline--fa {
+                vertical-align: -0.200em;
+            }
+            .rounded-social-buttons {
+                text-align: center;
+            }
+            .rounded-social-buttons .social-button {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+                width: 3.125rem;
+                height: 3.125rem;
+                border: 0.125rem solid transparent;
+                padding: 0;
+                text-decoration: none;
+                text-align: center;
+                color: #fefefe;
+                font-size: 1.5625rem;
+                font-weight: normal;
+                line-height: 2em;
+                border-radius: 1.6875rem;
+                transition: all 0.5s ease;
+                margin-right: 0.25rem;
+                margin-bottom: 0.25rem;
+            }
+            .rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
+                -webkit-transform: rotate(360deg);
+                    -ms-transform: rotate(360deg);
+                        transform: rotate(360deg);
+            }
+            .rounded-social-buttons .fa-linkedin, .fa-google, .fa-phone, .fa-github {
+                font-size: 25px;
+                color:#8c8c8c;
+            }
+            .rounded-social-buttons .social-button.linkedin {
+                background: #ffffff;
+            }
+            .rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
+                color: #007bb5;
+                background: #fefefe;
+            }
+            .rounded-social-buttons .fa-linkedin:hover {
+                color: #007bb5;
+            }
+            .rounded-social-buttons .social-button.google {
+                background: #ffffff;
+            }
+            .rounded-social-buttons .social-button.google:hover, .rounded-social-buttons .social-button.google:focus {
+                color: #EA4335;
+                background: #fefefe;
+            }
+            .rounded-social-buttons .fa-google:hover {
+                color: #EA4335;
+            }
+            .rounded-social-buttons .social-button.phone {
+                background: #ffffff;
+            }
+            .rounded-social-buttons .social-button.phone:hover, .rounded-social-buttons .social-button.phone:focus {
+                color: #00a21e;
+                background: #fefefe;
+            }
+            .rounded-social-buttons .fa-phone:hover {
+                color: #00a21e;
+            }
+            .rounded-social-buttons .social-button.github {
+                background: #ffffff;
+            }
+            .rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
+                color: #00a21e;
+                background: #fefefe;
+            }
+            .rounded-social-buttons .fa-github:hover {
+                color: #00a21e;
+            }
+            .rounded-social-buttons .social-button:hover + .tool-tip{
+                display: block;
+            }
+            .tool-tip {
+                background-color: #FFFFFF;
+                margin-top: 10px;
+                width: 75px;
+                border-radius: 5px;
+                font-size: 12px;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header-banner">
+            <div class="nav-bar">
+                <div class="logo-name">
+                    <span>VN</span><span class="dot"></span>
+                    <div class="custom-navbar">
+                        <ul>
+                            <li><a href="{{ url_for('home')}}" method="get">Home</a></li>
+                            <li><a href="{{ url_for('project')}}" method="get">Projects</a></li>
+                            <li class="Resume"><a class="Resume1" href="{{ url_for('static',filename='Vignesh Resume.pdf')}}" download>Resume</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="analyticsText">
+            <span>Analytics</span>
+        </div>
+        <hr class="analyticsUnderline">
+        <div class="analytics-section" id="analytics-section">
+            <div class="one">
+                <div class="analytics-projectname">
+                    Hi
+                </div>
+                <div class="analytics-projectdescription">
+                    <div class="analytics-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="analytics-projectname">
+                    Hi
+                </div>
+                <div class="analytics-projectdescription">
+                    <div class="analytics-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+            <div class="three">
+                <div class="analytics-projectname">
+                    Hi
+                </div>
+                <div class="analytics-projectdescription">
+                    <div class="analytics-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-break"></div>
+        <div class="datascienceText">
+            <span>Data Science</span>
+        </div>
+        <hr class="datascienceUnderline">
+        <div class="datascience-section" id="datascience-section">
+            <div class="one">
+                <div class="datascience-projectname">
+                    Hi
+                </div>
+                <div class="datascience-projectdescription">
+                    <div class="datascience-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="datascience-projectname">
+                    Hi
+                </div>
+                <div class="datascience-projectdescription">
+                    <div class="datascience-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+            <div class="three">
+                <div class="datascience-projectname">
+                    Hi
+                </div>
+                <div class="datascience-projectdescription">
+                    <div class="datascience-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-break"></div>
+        <div class="automationText">
+            <span>Automation</span>
+        </div>
+        <hr class="automationUnderline">
+        <div class="automation-section" id="automation-section">
+            <div class="one">
+                <div class="automation-projectname">
+                    Hi
+                </div>
+                <div class="automation-projectdescription">
+                    <div class="automation-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="automation-projectname">
+                    Hi
+                </div>
+                <div class="automation-projectdescription">
+                    <div class="automation-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+            <div class="three">
+                <div class="automation-projectname">
+                    Hi
+                </div>
+                <div class="automation-projectdescription">
+                    <div class="automation-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-break"></div>
+        <div class="webdevText">
+            <span>Web Development</span>
+        </div>
+        <hr class="webdevUnderline">
+        <div class="webdev-section" id="webdev-section">
+            <div class="one">
+                <div class="webdev-projectname">
+                    Hi
+                </div>
+                <div class="webdev-projectdescription">
+                    <div class="webdev-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="webdev-projectname">
+                    Hi
+                </div>
+                <div class="webdev-projectdescription">
+                    <div class="webdev-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+            <div class="three">
+                <div class="webdev-projectname">
+                    Hi
+                </div>
+                <div class="webdev-projectdescription">
+                    <div class="webdev-projectdescriptiontext">
+                        Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University.Data science is the study of data to extract meaningful insights for business and industry. It uses a multidisciplinary approach that combines principles and practices from fields like mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data. AWS What is Data Science? - AWS Data science is the study of data to extract meaningful insights for business. It is a mul...Michigan Technological University
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section" id="footer">
+            <div class="footer-social">
+                <div class="rounded-social-buttons">
+                    <a class="social-button phone" href="tel:+919600013618" title="Click to Call"><i class="fa fa-phone"></i></a>
+                    <a class="social-button google" href="mailto:vnvignesh98@gmail.com" target="_blank" title="Click to Mail"><i class="fa fa-brands fa-google"></i></a>
+                    <a class="social-button linkedin" href="https://linkedin.com/in/vignesh-vn-7b3173170" target="_blank" title="View my LinkedIn Profile"><i class="fa fa-brands fa-linkedin"></i></a>
+                    <a class="social-button github" href="https://github.com/vnvignesh98" target="_blank" title="View my GitHub Profile"><i class="fa fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    <script>
+        function togglePopup() {
+                const overlay = document.getElementById('popupOverlay');
+                overlay.classList.toggle('show');
+            }
+        function openPDF() {
+                window.open("{{ url_for('static',filename='Vignesh Resume.pdf')}}")
+            }
+    </script>
+    </body>
+</html>
